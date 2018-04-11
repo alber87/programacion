@@ -25,8 +25,27 @@ public class Vehiculo {
         this.alquilado = alquilado;
     }
     
-    public void alquilar(){
+    public void alquilar(Vehiculo v){
+        if(!v.alquilado){
+            v.setAlquilado(true);
+            System.out.println("El vehículo con matrícula " + v.matricula +
+                    " ha sido alquilado con éxito.");
+        }
+        else
+            System.out.println("El vehículo con matrícula " + v.matricula +
+                    "ya está alquilado.");
         
+    }
+    
+    public void devolver(Vehiculo v){
+        if(v.alquilado){
+            v.setAlquilado(false);
+            System.out.println("El vehículo con matrícula " + v.matricula +
+                    " ha sido devuelto con éxito.");
+        }
+        else
+            System.out.println("El vehiculo con matricula " + v.matricula + 
+                    "no se puede devolver porque no ha sido alquilado previamente.");
     }
     
     
