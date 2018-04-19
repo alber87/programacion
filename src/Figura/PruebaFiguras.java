@@ -41,6 +41,7 @@ public class PruebaFiguras {
                         System.out.print("Introduce el lado del triangulo: ");
                         double cateto = sc.nextDouble();
                         Triangulo t = new TrianguloRectangulo(cateto);
+                        ultFigura = t;
                         break;
                     case 4:
                         if(ultFigura == null){
