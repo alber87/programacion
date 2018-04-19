@@ -12,9 +12,9 @@ public class TrianguloRectangulo extends Triangulo{
     public void dibujarFigura() {
         for (int i=0; i<this.getBase(); i++) {
             for (int j=0; j<i; j++) {
-                System.out.println("*");
+                System.out.print("*");
             }
-            System.out.println("*");
+            System.out.println();
         }
     }
     
