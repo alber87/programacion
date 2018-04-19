@@ -35,8 +35,9 @@ public class Rectangulo implements Figura{
     public void dibujarFigura() {
         for (int i=0; i <this.altura; i++) {
             for (int j=0; j <this.base; j++) {
-                System.out.println("*");
+                System.out.print("*");
             }
+            System.out.println();
         }
     }
     
