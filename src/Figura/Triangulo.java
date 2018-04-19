@@ -1,26 +1,40 @@
 
 package Figura;
 
-public class Triangulo implements Figura{
+
+public abstract class Triangulo implements Figura{
+    
+    private double base, altura;
+
+    public Triangulo(double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+    }
 
     @Override
-    public Figura devNombFigura() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String devNombFigura() {
+        return getClass().getSimpleName();
     }
 
     @Override
     public double devArea() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        double area;
+        area = (this.base+this.altura)/2;
+        return area;
     }
 
     @Override
     public double devPerimetro() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        double perimetro, hipotenusa;
+        hipotenusa = Math.sqrt(Math.pow(this.base, 2) + Math.pow(this.altura, 2));
+        perimetro = this.base + this.altura + hipotenusa;
+        return perimetro;
     }
 
-    @Override
-    public void dibujarFigura() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public double getBase() {
+        return base;
     }
+    
+    
     
 }

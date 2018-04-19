@@ -1,26 +1,23 @@
 
 package Figura;
 
-public class TrianguloRectangulo implements Figura{
+public class TrianguloRectangulo extends Triangulo{
 
-    @Override
-    public Figura devNombFigura() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public double devArea() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public double devPerimetro() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+    public TrianguloRectangulo(double cateto) {
+        super(cateto, cateto);
+    }    
+    
+    
     @Override
     public void dibujarFigura() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for (int i=0; i<this.getBase(); i++) {
+            for (int j=0; j<i; j++) {
+                System.out.println("*");
+            }
+            System.out.println("*");
+        }
     }
+    
+    
     
 }
